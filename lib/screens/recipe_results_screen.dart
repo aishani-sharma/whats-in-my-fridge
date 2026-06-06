@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../services/recipe_service.dart';
+import 'recipe_detail_screen.dart';
 
 class RecipeResultsScreen extends StatefulWidget {
   final List<String> ingredients;
@@ -176,7 +177,15 @@ class _RecipeResultsScreenState extends State<RecipeResultsScreen> {
 
     return GestureDetector(
       onTap: () {
-        // navigate to recipe detail screen later
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => RecipeDetailScreen(
+              recipeId: recipe['id'],
+              recipeTitle: recipe['title'],
+            ),
+          ),
+        );
       },
       child: Container(
         margin: const EdgeInsets.only(bottom: 12),
