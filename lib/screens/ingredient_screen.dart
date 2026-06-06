@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'recipe_results_screen.dart';
 
 class IngredientScreen extends StatefulWidget {
   const IngredientScreen({super.key});
@@ -245,7 +246,16 @@ class _IngredientScreenState extends State<IngredientScreen> {
                 onTap: fridgeItems.isEmpty
                     ? null
                     : () {
-                        // navigation to recipe screen goes here
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => RecipeResultsScreen(
+                              ingredients: fridgeItems
+                                  .map((item) => item['name']!.toLowerCase())
+                                  .toList(),
+                            ),
+                          ),
+                        );
                       },
                 child: Container(
                   width: double.infinity,
