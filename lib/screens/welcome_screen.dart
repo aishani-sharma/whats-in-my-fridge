@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'ingredient_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -28,8 +29,11 @@ class WelcomeScreen extends StatelessWidget {
             // Button
             GestureDetector(
               onTap: () {
-                // navigation goes here later
-              },
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const IngredientScreen()),
+                );
+              } ,
               child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                 decoration: BoxDecoration(
