@@ -94,3 +94,10 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/Fridge.png"
+  background_color: "#F2C4CE"
+  adaptive_icon_background: "#F2C4CE"
+  adaptive_icon_foreground: "assets/images/Fridge.png"
