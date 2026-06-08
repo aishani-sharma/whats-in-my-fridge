@@ -174,7 +174,7 @@ class _IngredientScreenState extends State<IngredientScreen> {
                             child: Container(
                               decoration: BoxDecoration(
                                 color: const Color(0xFFE8748A)
-                                    .withOpacity(0.15),
+                                    .withValues(alpha: 0.15),
                                 border: Border.all(
                                   color: const Color(0xFFE8748A),
                                   width: 2,
